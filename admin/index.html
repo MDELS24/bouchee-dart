@@ -34,17 +34,26 @@
         <button type="button" class="quiet" id="logout">Se déconnecter</button>
       </div>
       <form id="content-form">
+        <fieldset><legend>État du site</legend>
+          <label class="toggle-row">
+            <span><strong>Masquer temporairement le site</strong><small>Affiche uniquement le message ci-dessous aux visiteurs.</small></span>
+            <span class="switch"><input name="sitePaused" type="checkbox"><span class="slider"></span></span>
+          </label>
+          <label>Message affiché lorsque le site est masqué<input name="pausedMessage" value="Pas d’expositions en ce moment. À bientôt."></label>
+        </fieldset>
         <fieldset><legend>La galerie</legend>
           <label>Nom de la galerie<input name="galleryName" required></label>
+          <label>Petit titre rouge au-dessus du nom<input name="heroEyebrow" required></label>
           <label>Présentation<textarea name="galleryIntro" rows="3" required></textarea></label>
           <div class="columns"><label>Responsable<input name="manager"></label><label>Artistes exposés<input name="artists"></label></div>
         </fieldset>
         <fieldset><legend>Exposition en cours</legend>
+          <label>Petit titre rouge de l’exposition<input name="exhibitionEyebrow" required></label>
           <div class="columns"><label>Nom de l’exposition<input name="exhibitionTitle" required></label><label>Dates<input name="exhibitionDates"></label></div>
           <label>Présentation<textarea name="exhibitionText" rows="5"></textarea></label>
           <label>Informations complémentaires<textarea name="exhibitionExtra" rows="3"></textarea></label>
-          <label>Ajouter des photos<input id="image-files" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
-          <p class="help">Formats JPG, PNG ou WebP. Les nouvelles images sont ajoutées à la galerie lors de l’enregistrement.</p>
+          <label>Ajouter une ou plusieurs photos<input id="image-files" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
+          <p class="help">Formats JPG, PNG ou WebP. Vous pouvez sélectionner plusieurs fichiers en une seule fois. Modifiez les légendes et l’ordre ci-dessous.</p>
           <div id="image-list" class="image-list"></div>
         </fieldset>
         <fieldset><legend>Adresse et contact</legend>
@@ -57,6 +66,6 @@
       </form>
     </section>
   </main>
-  <script src="admin.js?v=2" defer></script>
+  <script src="admin.js?v=3" defer></script>
 </body>
 </html>

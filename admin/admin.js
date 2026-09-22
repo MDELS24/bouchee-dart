@@ -30,6 +30,7 @@ async function loadContent() {
   Object.entries(state.content).forEach(([key,value]) => {
     const field = contentForm.elements.namedItem(key);
     if (field && typeof value === "string") field.value = value;
+    if (field && typeof value === "boolean" && field.type === "checkbox") field.checked = value;
   });
   renderImages();
 }
@@ -40,9 +41,16 @@ function renderImages() {
   (state.content.images || []).forEach((image,index) => {
     const figure = document.createElement("figure"); figure.className="image-item";
     const img = document.createElement("img"); img.src=`../${image.src}`; img.alt=image.alt||"";
-    const button = document.createElement("button"); button.type="button"; button.textContent="Retirer";
-    button.addEventListener("click",()=>{ state.content.images.splice(index,1); renderImages(); });
-    figure.append(img,button); list.append(figure);
+    const caption = document.createElement("input"); caption.type="text"; caption.value=image.caption||""; caption.placeholder="Légende de la photo"; caption.setAttribute("aria-label",`Légende de la photo ${index+1}`);
+    caption.addEventListener("input",()=>{ image.caption=caption.value; });
+    const controls = document.createElement("div"); controls.className="image-controls";
+    const up = document.createElement("button"); up.type="button"; up.textContent="←"; up.title="Déplacer avant"; up.disabled=index===0;
+    up.addEventListener("click",()=>{ [state.content.images[index-1],state.content.images[index]]=[state.content.images[index],state.content.images[index-1]]; renderImages(); });
+    const down = document.createElement("button"); down.type="button"; down.textContent="→"; down.title="Déplacer après"; down.disabled=index===state.content.images.length-1;
+    down.addEventListener("click",()=>{ [state.content.images[index],state.content.images[index+1]]=[state.content.images[index+1],state.content.images[index]]; renderImages(); });
+    const remove = document.createElement("button"); remove.type="button"; remove.textContent="Retirer";
+    remove.addEventListener("click",()=>{ state.content.images.splice(index,1); renderImages(); });
+    controls.append(up,down,remove); figure.append(img,caption,controls); list.append(figure);
   });
 }
 
@@ -77,6 +85,7 @@ contentForm.addEventListener("submit", async event => {
   try {
     const fields=new FormData(contentForm);
     for (const [key,value] of fields.entries()) if (key!=="images" && typeof value==="string") state.content[key]=value.trim();
+    state.content.sitePaused = contentForm.elements.sitePaused.checked;
     const files=[...document.querySelector("#image-files").files];
     for (let i=0;i<files.length;i++) { saveStatus.textContent=`Téléversement de la photo ${i+1}/${files.length}…`; state.content.images.push(await uploadImage(files[i])); }
     const latest=await github(`/repos/${state.owner}/${state.repo}/contents/${CONTENT_PATH}?ref=${encodeURIComponent(state.branch)}`);

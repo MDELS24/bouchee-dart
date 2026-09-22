@@ -1,6 +1,10 @@
 const fallback = {
   galleryName: "Bouchée d’Art",
+  heroEyebrow: "Galerie indépendante",
   galleryIntro: "Un lieu à taille humaine consacré aux artistes émergents et aux regards singuliers.",
+  exhibitionEyebrow: "En ce moment",
+  sitePaused: false,
+  pausedMessage: "Pas d’expositions en ce moment. À bientôt.",
   exhibitionTitle: "Terrain sensible",
   exhibitionDates: "10 octobre — 16 novembre 2026",
   exhibitionText: "Une exposition collective qui réunit peintures, photographies et objets autour des paysages intérieurs et des matières du quotidien.",
@@ -25,6 +29,17 @@ const safeLines = value => String(value ?? "").split("\n").map(line => {
 function render(data) {
   const content = { ...fallback, ...data };
   document.title = `${content.galleryName} — Galerie`;
+  if (content.sitePaused) {
+    document.body.replaceChildren();
+    document.body.className = "site-paused";
+    const main = document.createElement("main");
+    main.className = "paused-page";
+    const message = document.createElement("p");
+    message.textContent = content.pausedMessage || fallback.pausedMessage;
+    main.append(message);
+    document.body.append(main);
+    return;
+  }
   document.querySelectorAll("[data-field]").forEach(el => {
     const value = content[el.dataset.field];
     if (value !== undefined) el.innerHTML = safeLines(value);
