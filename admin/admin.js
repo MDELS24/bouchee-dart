@@ -32,7 +32,16 @@ async function loadContent() {
     if (field && typeof value === "string") field.value = value;
     if (field && typeof value === "boolean" && field.type === "checkbox") field.checked = value;
   });
+  renderHeroPreview();
   renderImages();
+}
+
+function renderHeroPreview(source=state.content?.heroImage) {
+  const preview = document.querySelector("#hero-preview-image");
+  if (source) {
+    preview.src = source.startsWith("blob:") ? source : `../${source}`;
+    preview.closest("figure").hidden = false;
+  } else preview.closest("figure").hidden = true;
 }
 
 function renderImages() {
@@ -67,17 +76,25 @@ document.querySelector("#login-form").addEventListener("submit", async event => 
   } catch(error) { state.token=""; loginStatus.textContent=`Connexion refusée : ${error.message}`; }
 });
 
-async function uploadImage(file) {
+async function uploadAsset(file, prefix="oeuvre") {
   if (!/^image\/(jpeg|png|webp)$/.test(file.type)) throw new Error(`Format non accepté : ${file.name}`);
   if (file.size > 8*1024*1024) throw new Error(`${file.name} dépasse 8 Mo.`);
   const extension = file.name.split(".").pop().toLowerCase();
   const slug = file.name.replace(/\.[^.]+$/,"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-  const path = `assets/uploads/${Date.now()}-${slug||"oeuvre"}.${extension}`;
+  const path = `assets/uploads/${Date.now()}-${prefix}-${slug||"image"}.${extension}`;
   const bytes = new Uint8Array(await file.arrayBuffer());
   let binary=""; bytes.forEach(byte => binary+=String.fromCharCode(byte));
   await github(`/repos/${state.owner}/${state.repo}/contents/${path}`, { method:"PUT", body:JSON.stringify({ message:`Ajoute ${file.name}`, content:btoa(binary), branch:state.branch }) });
   return { src:path, alt:`Œuvre de l’exposition — ${file.name.replace(/\.[^.]+$/,"")}`, caption:file.name.replace(/\.[^.]+$/,"") };
 }
+
+const uploadImage = file => uploadAsset(file);
+
+document.querySelector("#hero-file").addEventListener("change", event => {
+  const file = event.target.files[0];
+  if (file) renderHeroPreview(URL.createObjectURL(file));
+  else renderHeroPreview();
+});
 
 contentForm.addEventListener("submit", async event => {
   event.preventDefault();
@@ -86,11 +103,13 @@ contentForm.addEventListener("submit", async event => {
     const fields=new FormData(contentForm);
     for (const [key,value] of fields.entries()) if (key!=="images" && typeof value==="string") state.content[key]=value.trim();
     state.content.sitePaused = contentForm.elements.sitePaused.checked;
+    const heroFile=document.querySelector("#hero-file").files[0];
+    if (heroFile) { saveStatus.textContent="Téléversement de la photo d’accueil…"; state.content.heroImage=(await uploadAsset(heroFile,"accueil")).src; }
     const files=[...document.querySelector("#image-files").files];
     for (let i=0;i<files.length;i++) { saveStatus.textContent=`Téléversement de la photo ${i+1}/${files.length}…`; state.content.images.push(await uploadImage(files[i])); }
     const latest=await github(`/repos/${state.owner}/${state.repo}/contents/${CONTENT_PATH}?ref=${encodeURIComponent(state.branch)}`);
     await github(`/repos/${state.owner}/${state.repo}/contents/${CONTENT_PATH}`, { method:"PUT", body:JSON.stringify({ message:"Met à jour le contenu de la galerie", content:encode(JSON.stringify(state.content,null,2)+"\n"), sha:latest.sha, branch:state.branch }) });
-    document.querySelector("#image-files").value=""; renderImages(); saveStatus.textContent="Modifications publiées. GitHub Pages se met à jour dans quelques instants.";
+    document.querySelector("#hero-file").value=""; document.querySelector("#image-files").value=""; renderHeroPreview(); renderImages(); saveStatus.textContent="Modifications publiées. GitHub Pages se met à jour dans quelques instants.";
   } catch(error) { saveStatus.textContent=`Échec : ${error.message}`; }
   finally { button.disabled=false; }
 });

@@ -24,6 +24,8 @@ button:disabled { opacity:.55; cursor:wait; }
 .status { min-height:1.5em; color:var(--accent); }
 .help { margin:-.6rem 0 0; color:#716c63; font-size:.78rem; }
 .image-list { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.hero-preview { margin:0; max-width:34rem; }
+.hero-preview img { width:100%; aspect-ratio:16/10; object-fit:cover; object-position:center; background:#ddd7cd; }
 .image-item { margin:0; display:grid; gap:.55rem; align-content:start; }
 .image-item img { width:100%; aspect-ratio:1/1; object-fit:cover; }
 .image-item input { padding:.65rem; font-size:.85rem; }
