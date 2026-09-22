@@ -3,7 +3,7 @@
   "heroEyebrow": "Centre d'Art — à Ostende",
   "galleryIntro": "Un lieu à taille humaine consacré aux artistes aux regards singuliers.",
   "exhibitionEyebrow": "En ce moment",
-  "sitePaused": true,
+  "sitePaused": false,
   "pausedMessage": "Le site web de Bouchée d'Art n'est pas encore prêt. À bientôt.",
   "exhibitionTitle": "Exposition sur la mer",
   "exhibitionDates": "10 octobre — 16 novembre 2026",
@@ -15,7 +15,7 @@
   "hours": "Jeudi — dimanche\n14 h — 18 h\n20 - 21 december\n27-28  december\n3 - 4 januari\n\n14-18u",
   "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
-  "additionalInfo": "Visites de groupe sur rendez-vous. Le Centre d'Art est accessible pour les PMR.",
+  "additionalInfo": "Visites de groupe sur rendez-vous. Le Centre d'Art est accessible pour les PMR. Test",
   "heroImage": "assets/uploads/1790108307151-accueil-image-codex-22-sept-2026-21-35-05.png",
   "images": [
     {
