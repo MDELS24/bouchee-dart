@@ -23,7 +23,8 @@ p, h1, h2, h3, a { overflow-wrap: anywhere; }
 .brand { font: 500 1.35rem/1 Georgia, serif; letter-spacing: .035em; }
 nav { display: flex; gap: clamp(1rem, 3vw, 2.5rem); }
 .header-actions { display:flex; align-items:center; gap:clamp(1rem,3vw,2.5rem); }
-.language-switch { display:flex; border-left:1px solid var(--line); padding-left:1rem; }
+.language-switch { position: relative; display:flex; padding-left:1rem; }
+.language-switch::before { position:absolute; top:50%; left:0; width:1px; height:1.45rem; background:linear-gradient(to bottom, transparent, rgba(29,28,25,.35), transparent); content:""; transform:translateY(-50%); }
 .language-switch button { border:0; padding:.4rem .45rem; background:transparent; color:var(--muted); font-size:.75rem; cursor:pointer; }
 .language-switch button.active { color:var(--ink); text-decoration:underline; text-underline-offset:.25rem; }
 nav a { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
@@ -68,10 +69,10 @@ footer { display: flex; justify-content: space-between; padding: 2rem var(--pad)
 
 @media (max-width: 760px) {
   .site-header { gap: .75rem; }
-  .brand { font-size: 1.1rem; }
-  .menu-toggle { display: block; }
+  .brand { max-width:calc(100% - 10rem); overflow:hidden; font-size: 1.1rem; text-overflow:ellipsis; white-space:nowrap; }
+  .menu-toggle { display: block; padding:.4rem 0; color:var(--ink); font-size:.75rem; cursor:pointer; }
   nav { position: absolute; top: 100%; left: 0; right: 0; display: none; flex-direction: column; padding: 1.5rem var(--pad); background: var(--paper); border-bottom: 1px solid var(--line); }
-  .header-actions { margin-left:auto; }
+  .header-actions { flex-shrink:0; gap:.85rem; margin-left:auto; }
   nav.open { display: flex; }
   .hero { grid-template-columns: 1fr; }
   .hero-copy { min-height: 65vh; }
@@ -87,9 +88,8 @@ footer { display: flex; justify-content: space-between; padding: 2rem var(--pad)
 }
 
 @media (max-width: 390px) {
-  .site-header { flex-wrap: wrap; }
-  .header-actions { gap: .5rem; }
-  .language-switch { padding-left: .5rem; }
+  .header-actions { gap:.65rem; }
+  .language-switch { padding-left:.65rem; }
   .hero-copy { padding-top: 4rem; padding-bottom: 4rem; }
   .hero-visual { min-height: 55vh; }
   footer { align-items: flex-start; flex-direction: column; }
