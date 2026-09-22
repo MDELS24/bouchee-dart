@@ -5,7 +5,7 @@
   "exhibitionEyebrow": "En ce moment",
   "sitePaused": false,
   "pausedMessage": "Pas d’expositions en ce moment. À bientôt.",
-  "exhibitionTitle": "Le Mexique",
+  "exhibitionTitle": "Exposition sur la mer",
   "exhibitionDates": "10 octobre — 16 novembre 2026",
   "exhibitionText": "Test Une exposition collective qui réunit peintures, photographies et objets. \n\nExemple de présentation",
   "exhibitionExtra": "Exemple: Vernissage le vendredi 9 octobre, de 18 h à 21 h. Entrée libre.",
@@ -16,7 +16,7 @@
   "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
   "additionalInfo": "Visites de groupe sur rendez-vous. La galerie est accessible.",
-  "heroImage": "assets/uploads/1790107656833-accueil-joseph-mallord-william-turner-ostende-1844.jpg",
+  "heroImage": "assets/uploads/1790107891342-accueil-image-codex-22-sept-2026-21-35-55.png",
   "images": [
     {
       "src": "assets/work-mineral.png",
