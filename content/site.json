@@ -1,0 +1,21 @@
+{
+  "galleryName": "Bouchée d’Art",
+  "galleryIntro": "Un lieu à taille humaine consacré aux artistes émergents et aux regards singuliers.",
+  "exhibitionTitle": "Terrain sensible",
+  "exhibitionDates": "10 octobre — 16 novembre 2026",
+  "exhibitionText": "Une exposition collective qui réunit peintures, photographies et objets. Les artistes y explorent les paysages intérieurs, les matières du quotidien et les récits que l’on garde en soi.",
+  "exhibitionExtra": "Vernissage le vendredi 9 octobre, de 18 h à 21 h. Entrée libre.",
+  "artists": "Ana Vermeer, Louis Delcourt, Sofia Marin",
+  "manager": "Claire Vandenberg",
+  "address": "24, rue des Tanneurs\n1000 Bruxelles",
+  "hours": "Jeudi — dimanche\n14 h — 18 h",
+  "email": "bonjour@boucheedart.be",
+  "phone": "+32 2 555 01 47",
+  "additionalInfo": "Visites de groupe sur rendez-vous. La galerie est accessible aux personnes à mobilité réduite.",
+  "heroImage": "assets/gallery-hero.png",
+  "images": [
+    { "src": "assets/work-mineral.png", "alt": "Peinture abstraite aux tons terre dans un espace de galerie", "caption": "Ana Vermeer — Strates, 2026" },
+    { "src": "assets/work-ceramic.png", "alt": "Sculpture en céramique présentée dans la galerie", "caption": "Sofia Marin — Matière vive, 2026" },
+    { "src": "assets/gallery-hero.png", "alt": "Vue d’ensemble de l’exposition Terrain sensible", "caption": "Terrain sensible — vue de l’exposition" }
+  ]
+}

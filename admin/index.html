@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Administration — Bouchée d’Art</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <header>
+      <a href="../">← Voir le site</a>
+      <span>Bouchée d’Art / Administration</span>
+    </header>
+
+    <section id="login-panel" class="panel narrow">
+      <p class="eyebrow">Accès sécurisé</p>
+      <h1>Connexion au CMS</h1>
+      <p>Utilisez un jeton GitHub à accès fin, limité à ce dépôt et à la permission « Contents: Read and write ». Le jeton reste dans la mémoire de cet onglet et n’est jamais enregistré.</p>
+      <form id="login-form">
+        <label>Compte GitHub<input name="owner" autocomplete="username" required placeholder="ex. votre-compte"></label>
+        <label>Dépôt<input name="repo" required placeholder="ex. bouchee-dart"></label>
+        <label>Jeton d’accès<input name="token" type="password" autocomplete="current-password" required placeholder="github_pat_…"></label>
+        <label>Branche<input name="branch" value="main" required></label>
+        <button type="submit">Se connecter</button>
+        <p id="login-status" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="editor-panel" class="panel" hidden>
+      <div class="editor-heading">
+        <div><p class="eyebrow">Contenu du site</p><h1>Modifier la galerie</h1></div>
+        <button type="button" class="quiet" id="logout">Se déconnecter</button>
+      </div>
+      <form id="content-form">
+        <fieldset><legend>La galerie</legend>
+          <label>Nom de la galerie<input name="galleryName" required></label>
+          <label>Présentation<textarea name="galleryIntro" rows="3" required></textarea></label>
+          <div class="columns"><label>Responsable<input name="manager"></label><label>Artistes exposés<input name="artists"></label></div>
+        </fieldset>
+        <fieldset><legend>Exposition en cours</legend>
+          <div class="columns"><label>Nom de l’exposition<input name="exhibitionTitle" required></label><label>Dates<input name="exhibitionDates"></label></div>
+          <label>Présentation<textarea name="exhibitionText" rows="5"></textarea></label>
+          <label>Informations complémentaires<textarea name="exhibitionExtra" rows="3"></textarea></label>
+          <label>Ajouter des photos<input id="image-files" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
+          <p class="help">Formats JPG, PNG ou WebP. Les nouvelles images sont ajoutées à la galerie lors de l’enregistrement.</p>
+          <div id="image-list" class="image-list"></div>
+        </fieldset>
+        <fieldset><legend>Adresse et contact</legend>
+          <div class="columns"><label>Adresse<textarea name="address" rows="3"></textarea></label><label>Horaires<textarea name="hours" rows="3"></textarea></label></div>
+          <div class="columns"><label>E-mail<input name="email" type="email"></label><label>Téléphone<input name="phone"></label></div>
+          <label>Informations complémentaires<textarea name="additionalInfo" rows="3"></textarea></label>
+        </fieldset>
+        <button type="submit" id="save-button">Enregistrer et publier</button>
+        <p id="save-status" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <script src="admin.js" defer></script>
+</body>
+</html>

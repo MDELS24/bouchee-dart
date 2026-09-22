@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bouchée d’Art, galerie d’art indépendante.">
+  <title>Bouchée d’Art — Galerie</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" data-field="galleryName">Bouchée d’Art</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" aria-label="Navigation principale">
+      <a href="#exposition">Exposition</a>
+      <a href="#artistes">Artistes</a>
+      <a href="#visiter">Visiter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Galerie indépendante</p>
+        <h1 data-field="galleryName">Bouchée d’Art</h1>
+        <p class="lede" data-field="galleryIntro">Un lieu à taille humaine consacré aux artistes émergents et aux regards singuliers.</p>
+        <a class="text-link" href="#exposition">Découvrir l’exposition <span aria-hidden="true">↘</span></a>
+      </div>
+      <figure class="hero-visual reveal">
+        <img id="hero-image" src="assets/gallery-hero.png" alt="Intérieur de la galerie Bouchée d’Art">
+      </figure>
+    </section>
+
+    <section class="exhibition section" id="exposition">
+      <div class="section-heading reveal">
+        <p class="eyebrow">En ce moment</p>
+        <h2 data-field="exhibitionTitle">Terrain sensible</h2>
+        <p class="dates" data-field="exhibitionDates">10 octobre — 16 novembre 2026</p>
+      </div>
+      <div class="exhibition-copy reveal">
+        <p data-field="exhibitionText">Une exposition collective qui réunit peintures, photographies et objets autour des paysages intérieurs et des matières du quotidien.</p>
+        <p class="detail" data-field="exhibitionExtra">Vernissage le vendredi 9 octobre, de 18 h à 21 h. Entrée libre.</p>
+      </div>
+      <div class="art-grid" id="art-grid" aria-label="Œuvres de l’exposition"></div>
+    </section>
+
+    <section class="people section" id="artistes">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Les personnes</p>
+        <h2>Artistes &amp; galerie</h2>
+      </div>
+      <div class="people-grid reveal">
+        <div>
+          <h3>Artistes exposés</h3>
+          <p data-field="artists">Ana Vermeer, Louis Delcourt, Sofia Marin</p>
+        </div>
+        <div>
+          <h3>Responsable</h3>
+          <p data-field="manager">Claire Vandenberg</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit section" id="visiter">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Nous rendre visite</p>
+        <h2>La galerie</h2>
+      </div>
+      <div class="visit-grid reveal">
+        <div>
+          <h3>Adresse</h3>
+          <p data-field="address">24, rue des Tanneurs<br>1000 Bruxelles</p>
+        </div>
+        <div>
+          <h3>Horaires</h3>
+          <p data-field="hours">Jeudi — dimanche<br>14 h — 18 h</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a id="email-link" href="mailto:bonjour@boucheedart.be" data-field="email">bonjour@boucheedart.be</a><br><a id="phone-link" href="tel:+3225550147" data-field="phone">+32 2 555 01 47</a></p>
+        </div>
+      </div>
+      <p class="additional reveal" data-field="additionalInfo">Visites de groupe sur rendez-vous. La galerie est accessible aux personnes à mobilité réduite.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> <span data-field="galleryName">Bouchée d’Art</span></p>
+    <a class="admin-link" href="admin/" aria-label="Administration du site">Administration</a>
+  </footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>
