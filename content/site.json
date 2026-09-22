@@ -16,7 +16,7 @@
   "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
   "additionalInfo": "Visites de groupe sur rendez-vous. La galerie est accessible.",
-  "heroImage": "assets/uploads/1790106794174-accueil-le-port-d-ostende.jpg",
+  "heroImage": "assets/uploads/1790107656833-accueil-joseph-mallord-william-turner-ostende-1844.jpg",
   "images": [
     {
       "src": "assets/work-mineral.png",
@@ -29,39 +29,34 @@
       "caption": "Terrain sensible — vue de l’exposition"
     },
     {
+      "src": "assets/uploads/1790106796047-oeuvre-albert-baertsoen-the-church-of-mariakerke-ostend-1914-ao-museum-of-fine-arts-ghent-msk.jpg",
+      "alt": "Œuvre de l’exposition — Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)",
+      "caption": "L'Église de Mariakerke (Ostende), 1892"
+    },
+    {
+      "src": "assets/uploads/1790107023611-oeuvre-legia-ostende-la-place-van-der-zweep.jpg",
+      "alt": "Œuvre de l’exposition — LEGIA_-_OSTENDE_-_La_Place_Van_der_Zweep",
+      "caption": "La place Van der Sweep, au début du XXe siècle"
+    },
+    {
+      "src": "assets/uploads/1790107025870-oeuvre-nels-ostende-place-de-la-station.jpg",
+      "alt": "Œuvre de l’exposition — NELS_-_OSTENDE_-_Place_de_la_station",
+      "caption": "Place de la station — Carte postale"
+    },
+    {
       "src": "assets/work-ceramic.png",
       "alt": "Sculpture en céramique présentée dans la galerie",
       "caption": "Sofia Marin — Matière vive, 2026"
     },
     {
-      "src": "assets/uploads/1790106796047-oeuvre-albert-baertsoen-the-church-of-mariakerke-ostend-1914-ao-museum-of-fine-arts-ghent-msk.jpg",
-      "alt": "Œuvre de l’exposition — Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)",
-      "caption": "Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)"
-    },
-    {
-      "src": "assets/uploads/1790107021978-oeuvre-joseph-mallord-william-turner-ostende-1844.jpg",
-      "alt": "Œuvre de l’exposition — Joseph_Mallord_William_Turner_Ostende_1844",
-      "caption": "Joseph_Mallord_William_Turner_Ostende_1844"
-    },
-    {
-      "src": "assets/uploads/1790107023611-oeuvre-legia-ostende-la-place-van-der-zweep.jpg",
-      "alt": "Œuvre de l’exposition — LEGIA_-_OSTENDE_-_La_Place_Van_der_Zweep",
-      "caption": "LEGIA_-_OSTENDE_-_La_Place_Van_der_Zweep"
-    },
-    {
-      "src": "assets/uploads/1790107025870-oeuvre-nels-ostende-place-de-la-station.jpg",
-      "alt": "Œuvre de l’exposition — NELS_-_OSTENDE_-_Place_de_la_station",
-      "caption": "NELS_-_OSTENDE_-_Place_de_la_station"
-    },
-    {
       "src": "assets/uploads/1790107027609-oeuvre-embankment-and-entrance-to-the-kursaal-ostend-belgium-ca-1895-3063887311.jpg",
       "alt": "Œuvre de l’exposition — Embankment_and_entrance_to_the_Kursaal,_Ostend,_Belgium,_ca._1895_(3063887311)",
-      "caption": "Embankment_and_entrance_to_the_Kursaal,_Ostend,_Belgium,_ca._1895_(3063887311)"
+      "caption": "Embankment and entrance to the Kursaal, Ostend — ca._1895"
     },
     {
       "src": "assets/uploads/1790107030908-oeuvre-siege-of-ostend05.jpg",
       "alt": "Œuvre de l’exposition — Siege_of_Ostend05",
-      "caption": "Siege_of_Ostend05"
+      "caption": "Siege of Ostend"
     }
   ]
 }
