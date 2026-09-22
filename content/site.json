@@ -16,7 +16,7 @@
   "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
   "additionalInfo": "Visites de groupe sur rendez-vous. La galerie est accessible.",
-  "heroImage": "assets/uploads/1790106355204-accueil-20260920-obga-chainbridgebudapest-shutterstock-1153376083-bing.jpg",
+  "heroImage": "assets/uploads/1790106794174-accueil-le-port-d-ostende.jpg",
   "images": [
     {
       "src": "assets/work-mineral.png",
@@ -32,6 +32,11 @@
       "src": "assets/work-ceramic.png",
       "alt": "Sculpture en céramique présentée dans la galerie",
       "caption": "Sofia Marin — Matière vive, 2026"
+    },
+    {
+      "src": "assets/uploads/1790106796047-oeuvre-albert-baertsoen-the-church-of-mariakerke-ostend-1914-ao-museum-of-fine-arts-ghent-msk.jpg",
+      "alt": "Œuvre de l’exposition — Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)",
+      "caption": "Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)"
     }
   ]
 }
