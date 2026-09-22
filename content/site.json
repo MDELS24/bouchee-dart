@@ -5,7 +5,7 @@
   "exhibitionEyebrow": "En ce moment",
   "sitePaused": false,
   "pausedMessage": "Le site web de Bouchée d'Art n'est pas encore prêt. À bientôt.",
-  "exhibitionTitle": "\"Une journée sur la mer\"",
+  "exhibitionTitle": "Une journée à la mer",
   "exhibitionDates": "10 octobre — 16 novembre 2026",
   "exhibitionText": "Une exposition collective qui réunit peintures, photographies et objets.",
   "exhibitionExtra": "20 —  21 december\n27 — 28  december\n3 —  4 januari\n\n14-18u Entrée libre.",
@@ -57,8 +57,8 @@
     {
       "src": "assets/uploads/1790119325005-oeuvre-pxl-20260919-182405176.jpg",
       "alt": "Œuvre — PXL_20260919_182405176",
-      "caption": "PXL_20260919_182405176",
-      "captionNl": "Essai"
+      "caption": "Essai",
+      "captionNl": "Prout"
     }
   ],
   "peopleTitle": "Artistes exposés",
