@@ -15,7 +15,7 @@
   "hours": "Jeudi — dimanche\n14 h — 18 h\n20 - 21 december\n27-28  december\n3 - 4 januari\n\n14-18u",
   "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
-  "additionalInfo": "Visites de groupe sur rendez-vous. Le Centre d'Art est accessible pour les PMR. Test",
+  "additionalInfo": "Visites de groupe sur rendez-vous. Le Centre d'Art est accessible pour les PMR.",
   "heroImage": "assets/uploads/1790108307151-accueil-image-codex-22-sept-2026-21-35-05.png",
   "images": [
     {
@@ -53,12 +53,6 @@
       "alt": "Sculpture en céramique présentée dans la galerie",
       "caption": "Sofia Marin — Matière vive, 2026",
       "captionNl": "Sofia Marin — Matière vive, 2026"
-    },
-    {
-      "src": "assets/uploads/1790119325005-oeuvre-pxl-20260919-182405176.jpg",
-      "alt": "Œuvre — PXL_20260919_182405176",
-      "caption": "Essai",
-      "captionNl": "Prout"
     }
   ],
   "peopleTitle": "Artistes exposés",
