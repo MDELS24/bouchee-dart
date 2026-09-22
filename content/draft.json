@@ -53,12 +53,18 @@
       "alt": "Sculpture en céramique présentée dans la galerie",
       "caption": "Sofia Marin — Matière vive, 2026",
       "captionNl": "Sofia Marin — Matière vive, 2026"
+    },
+    {
+      "src": "assets/uploads/1790114851339-oeuvre-sint-petrus-en-pauluskerk-10003.jpg",
+      "alt": "Œuvre — Sint-Petrus-en-Pauluskerk_10003",
+      "caption": "Sint-Petrus-en-Pauluskerk",
+      "captionNl": "Sint-Petrus-en-Paulusker"
     }
   ],
   "peopleTitle": "Artistes exposés",
   "visitTitle": "Le Centre d'Art",
   "nl": {
-    "galleryName": "Bouchée d’art",
+    "galleryName": "Bouchée d’Art",
     "heroEyebrow": "Kunsttentoonstelling in Oostende",
     "galleryIntro": "Een kleinschalige plek gewijd aan kunstenaars met een eigenzinnige blik.",
     "exhibitionEyebrow": "Nu te zien",
