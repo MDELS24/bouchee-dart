@@ -1,5 +1,5 @@
 {
-  "galleryName": "Centre d'Art —  \"Bouchée d’Art\"",
+  "galleryName": "Centre d'Art —  Bouchée d’Art",
   "heroEyebrow": "Centre d'Art — Gallerie à Ostende",
   "galleryIntro": "Un lieu à taille humaine consacré aux artistes aux regards singuliers.",
   "exhibitionEyebrow": "En ce moment",
@@ -39,16 +39,6 @@
       "caption": "La place Van der Sweep, au début du XXe siècle"
     },
     {
-      "src": "assets/uploads/1790107025870-oeuvre-nels-ostende-place-de-la-station.jpg",
-      "alt": "Œuvre de l’exposition — NELS_-_OSTENDE_-_Place_de_la_station",
-      "caption": "Place de la station — Carte postale"
-    },
-    {
-      "src": "assets/work-ceramic.png",
-      "alt": "Sculpture en céramique présentée dans la galerie",
-      "caption": "Sofia Marin — Matière vive, 2026"
-    },
-    {
       "src": "assets/uploads/1790107027609-oeuvre-embankment-and-entrance-to-the-kursaal-ostend-belgium-ca-1895-3063887311.jpg",
       "alt": "Œuvre de l’exposition — Embankment_and_entrance_to_the_Kursaal,_Ostend,_Belgium,_ca._1895_(3063887311)",
       "caption": "Embankment and entrance to the Kursaal, Ostend — ca._1895"
@@ -57,6 +47,11 @@
       "src": "assets/uploads/1790107030908-oeuvre-siege-of-ostend05.jpg",
       "alt": "Œuvre de l’exposition — Siege_of_Ostend05",
       "caption": "Siege of Ostend"
+    },
+    {
+      "src": "assets/work-ceramic.png",
+      "alt": "Sculpture en céramique présentée dans la galerie",
+      "caption": "Sofia Marin — Matière vive, 2026"
     }
   ]
 }
