@@ -33,17 +33,20 @@
     {
       "src": "assets/uploads/1790106796047-oeuvre-albert-baertsoen-the-church-of-mariakerke-ostend-1914-ao-museum-of-fine-arts-ghent-msk.jpg",
       "alt": "Œuvre de l’exposition — Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)",
-      "caption": "L'Église de Mariakerke (Ostende), 1892"
+      "caption": "L'Église de Mariakerke (Ostende), 1892",
+      "captionNl": "L'Église de Mariakerke (Ostende), 1892"
     },
     {
       "src": "assets/uploads/1790107023611-oeuvre-legia-ostende-la-place-van-der-zweep.jpg",
       "alt": "Œuvre de l’exposition — LEGIA_-_OSTENDE_-_La_Place_Van_der_Zweep",
-      "caption": "La place Van der Sweep, au début du XXe siècle"
+      "caption": "La place Van der Sweep, au début du XXe siècle",
+      "captionNl": "La place Van der Sweep, au début du XXe siècle"
     },
     {
       "src": "assets/uploads/1790107030908-oeuvre-siege-of-ostend05.jpg",
       "alt": "Œuvre de l’exposition — Siege_of_Ostend05",
-      "caption": "Siege of Ostend"
+      "caption": "Siege of Ostend",
+      "captionNl": "Siege of Ostend"
     },
     {
       "src": "assets/work-ceramic.png",
@@ -52,8 +55,8 @@
       "captionNl": "Sofia Marin — Matière vive, 2026"
     }
   ],
-  "peopleTitle": "Artistes & galerie",
-  "visitTitle": "La galerie",
+  "peopleTitle": "Artistes exposés",
+  "visitTitle": "Le Centre d'Art",
   "nl": {
     "galleryName": "Bouchée d’art",
     "heroEyebrow": "Kunsttentoonstelling in Oostende",
@@ -65,8 +68,8 @@
     "exhibitionExtra": "Opening op vrijdag 9 oktober van 18 tot 21 uur. Vrije toegang.",
     "artists": "Patrick",
     "manager": "C.D.",
-    "peopleTitle": "Kunstenaars & galerie",
-    "visitTitle": "De galerie",
+    "peopleTitle": "Kunstenaars",
+    "visitTitle": "Kunsttentoonstelling",
     "address": "24, rue des Tanneurs\n1000 Ostende",
     "hours": "Donderdag — zondag\n14 — 18 uur",
     "additionalInfo": "Groepsbezoeken op afspraak. De galerie is toegankelijk.",
