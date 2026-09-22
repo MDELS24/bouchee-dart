@@ -48,13 +48,14 @@ function renderImages() {
 
 document.querySelector("#login-form").addEventListener("submit", async event => {
   event.preventDefault(); loginStatus.textContent="Connexion…";
-  const data = new FormData(event.currentTarget);
+  const form = event.currentTarget;
+  const data = new FormData(form);
   Object.assign(state, { owner:data.get("owner").trim(), repo:data.get("repo").trim(), token:data.get("token").trim(), branch:data.get("branch").trim()||"main" });
   try {
     const repo = await github(`/repos/${state.owner}/${state.repo}`);
     if (!repo.permissions?.push) throw new Error("Ce jeton ne permet pas de modifier le dépôt.");
     await loadContent();
-    event.currentTarget.reset(); loginPanel.hidden=true; editorPanel.hidden=false; loginStatus.textContent="";
+    form.reset(); loginPanel.hidden=true; editorPanel.hidden=false; loginStatus.textContent="";
   } catch(error) { state.token=""; loginStatus.textContent=`Connexion refusée : ${error.message}`; }
 });
 
