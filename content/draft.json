@@ -3,7 +3,7 @@
   "heroEyebrow": "Centre d'Art — à Ostende",
   "galleryIntro": "Un lieu à taille humaine consacré aux artistes aux regards singuliers.",
   "exhibitionEyebrow": "En ce moment",
-  "sitePaused": false,
+  "sitePaused": true,
   "pausedMessage": "Le site web de Bouchée d'Art n'est pas encore prêt. À bientôt.",
   "exhibitionTitle": "Exposition sur la mer",
   "exhibitionDates": "10 octobre — 16 novembre 2026",
@@ -33,17 +33,20 @@
     {
       "src": "assets/uploads/1790106796047-oeuvre-albert-baertsoen-the-church-of-mariakerke-ostend-1914-ao-museum-of-fine-arts-ghent-msk.jpg",
       "alt": "Œuvre de l’exposition — Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)",
-      "caption": "L'Église de Mariakerke (Ostende), 1892"
+      "caption": "L'Église de Mariakerke (Ostende), 1892",
+      "captionNl": "L'Église de Mariakerke (Ostende), 1892"
     },
     {
       "src": "assets/uploads/1790107023611-oeuvre-legia-ostende-la-place-van-der-zweep.jpg",
       "alt": "Œuvre de l’exposition — LEGIA_-_OSTENDE_-_La_Place_Van_der_Zweep",
-      "caption": "La place Van der Sweep, au début du XXe siècle"
+      "caption": "La place Van der Sweep, au début du XXe siècle",
+      "captionNl": "La place Van der Sweep, au début du XXe siècle"
     },
     {
       "src": "assets/uploads/1790107030908-oeuvre-siege-of-ostend05.jpg",
       "alt": "Œuvre de l’exposition — Siege_of_Ostend05",
-      "caption": "Siege of Ostend"
+      "caption": "Siege of Ostend",
+      "captionNl": "Siege of Ostend"
     },
     {
       "src": "assets/work-ceramic.png",
