@@ -3,7 +3,7 @@
   "heroEyebrow": "Galerie indépendante",
   "galleryIntro": "Un lieu à taille humaine consacré aux artistes aux regards singuliers.",
   "exhibitionEyebrow": "En ce moment",
-  "sitePaused": false,
+  "sitePaused": true,
   "pausedMessage": "Pas d’expositions en ce moment. À bientôt.",
   "exhibitionTitle": "Le Mexique",
   "exhibitionDates": "10 octobre — 16 novembre 2026",
