@@ -5,11 +5,11 @@
   "exhibitionDates": "10 octobre — 16 novembre 2026",
   "exhibitionText": "Une exposition collective qui réunit peintures, photographies et objets. Les artistes y explorent les paysages intérieurs, les matières du quotidien et les récits que l’on garde en soi.",
   "exhibitionExtra": "Vernissage le vendredi 9 octobre, de 18 h à 21 h. Entrée libre.",
-  "artists": "Ana Vermeer, Louis Delcourt",
+  "artists": "",
   "manager": "C.D.",
   "address": "24, rue des Tanneurs\n1000 Bruxelles",
   "hours": "Jeudi — dimanche\n14 h — 18 h",
-  "email": "bonjour@boucheedart.be",
+  "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
   "additionalInfo": "Visites de groupe sur rendez-vous. La galerie est accessible.",
   "heroImage": "assets/gallery-hero.png",
@@ -28,11 +28,6 @@
       "src": "assets/gallery-hero.png",
       "alt": "Vue d’ensemble de l’exposition Terrain sensible",
       "caption": "Terrain sensible — vue de l’exposition"
-    },
-    {
-      "src": "assets/uploads/1790099510789-pxl-20260919-182617090.jpg",
-      "alt": "Œuvre de l’exposition — PXL_20260919_182617090",
-      "caption": "PXL_20260919_182617090"
     }
   ]
 }
