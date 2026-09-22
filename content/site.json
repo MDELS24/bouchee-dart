@@ -24,14 +24,14 @@
       "caption": "Ana Vermeer — Strates, 2026"
     },
     {
-      "src": "assets/work-ceramic.png",
-      "alt": "Sculpture en céramique présentée dans la galerie",
-      "caption": "Sofia Marin — Matière vive, 2026"
-    },
-    {
       "src": "assets/gallery-hero.png",
       "alt": "Vue d’ensemble de l’exposition Terrain sensible",
       "caption": "Terrain sensible — vue de l’exposition"
+    },
+    {
+      "src": "assets/work-ceramic.png",
+      "alt": "Sculpture en céramique présentée dans la galerie",
+      "caption": "Sofia Marin — Matière vive, 2026"
     }
   ]
 }
