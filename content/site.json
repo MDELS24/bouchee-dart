@@ -3,7 +3,7 @@
   "heroEyebrow": "Centre d'Art — à Ostende",
   "galleryIntro": "Un lieu à taille humaine consacré aux artistes aux regards singuliers.",
   "exhibitionEyebrow": "En ce moment",
-  "sitePaused": false,
+  "sitePaused": true,
   "pausedMessage": "Le site web de Bouchée d'Art n'est pas encore disponible. À bientôt.",
   "exhibitionTitle": "Une journée à la mer",
   "exhibitionDates": "10 octobre — 16 novembre 2026",
@@ -53,12 +53,6 @@
       "alt": "Sculpture en céramique présentée dans la galerie",
       "caption": "Sofia Marin — Matière vive, 2026",
       "captionNl": "Sofia Marin — Matière vive, 2026"
-    },
-    {
-      "src": "assets/uploads/1790173698147-oeuvre-pm-146145n-b-gent.webp",
-      "alt": "Œuvre — PM_146145n_B_Gent",
-      "caption": "PM_146145n_B_Gent",
-      "captionNl": "PM_146145n_B_Gent"
     }
   ],
   "peopleTitle": "Artistes exposés",
