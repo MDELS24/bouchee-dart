@@ -12,7 +12,7 @@
   "artists": "Vincent Van Gogh / Magritte / Hergé",
   "manager": "C.D.",
   "address": "Sint Fransiscusstraat 4 \n8400 Oostende",
-  "hours": "Jeudi — dimanche\n14 h — 17 h",
+  "hours": "Jeudi — dimanche\n14 h — 19 h",
   "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
   "additionalInfo": "Visites de groupe sur rendez-vous. Le Centre d'Art est accessible pour les PMR.",
@@ -71,7 +71,7 @@
     "peopleTitle": "Kunstenaars",
     "visitTitle": "Kunsttentoonstelling",
     "address": "24, rue des Tanneurs\n1000 Ostende",
-    "hours": "Donderdag — zondag\n14 — 17 uur",
+    "hours": "Donderdag — zondag\n14 — 19 uur",
     "additionalInfo": "Groepsbezoeken op afspraak. De galerie is toegankelijk.",
     "pausedMessage": "Momenteel zijn er geen tentoonstellingen. Tot binnenkort.",
     "imageCaptions": [
