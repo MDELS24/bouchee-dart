@@ -16,40 +16,40 @@
   "email": "test@boucheedart.be",
   "phone": "+32 2 555 01 47",
   "additionalInfo": "Visites de groupe sur rendez-vous. Le Centre d'Art est accessible pour les PMR.",
-  "heroImage": "assets/uploads/1790108307151-accueil-image-codex-22-sept-2026-21-35-05.png",
+  "heroImage": "assets/uploads/1790108307151-accueil-image-codex-22-sept-2026-21-35-05.webp",
   "images": [
     {
-      "src": "assets/work-mineral.png",
+      "src": "assets/work-mineral.webp",
       "alt": "Peinture abstraite aux tons terre dans un espace de galerie",
       "caption": "Ana Vermeer — Strates, 2026",
       "captionNl": "Ana Vermeer — Strates, 2026"
     },
     {
-      "src": "assets/gallery-hero.png",
+      "src": "assets/gallery-hero.webp",
       "alt": "Vue d’ensemble de l’exposition Terrain sensible",
       "caption": "Terrain sensible — vue de l’exposition",
       "captionNl": "Terrain sensible — vue de l’exposition"
     },
     {
-      "src": "assets/uploads/1790106796047-oeuvre-albert-baertsoen-the-church-of-mariakerke-ostend-1914-ao-museum-of-fine-arts-ghent-msk.jpg",
+      "src": "assets/uploads/1790106796047-oeuvre-albert-baertsoen-the-church-of-mariakerke-ostend-1914-ao-museum-of-fine-arts-ghent-msk.webp",
       "alt": "Œuvre de l’exposition — Albert_Baertsoen_-_The_Church_of_Mariakerke_(Ostend)_-_1914-AO_-_Museum_of_Fine_Arts_Ghent_(MSK)",
       "caption": "L'Église de Mariakerke (Ostende), 1892",
       "captionNl": "L'Église de Mariakerke (Ostende), 1892"
     },
     {
-      "src": "assets/uploads/1790107023611-oeuvre-legia-ostende-la-place-van-der-zweep.jpg",
+      "src": "assets/uploads/1790107023611-oeuvre-legia-ostende-la-place-van-der-zweep.webp",
       "alt": "Œuvre de l’exposition — LEGIA_-_OSTENDE_-_La_Place_Van_der_Zweep",
       "caption": "La place Van der Sweep, au début du XXe siècle",
       "captionNl": "La place Van der Sweep, au début du XXe siècle"
     },
     {
-      "src": "assets/uploads/1790107030908-oeuvre-siege-of-ostend05.jpg",
+      "src": "assets/uploads/1790107030908-oeuvre-siege-of-ostend05.webp",
       "alt": "Œuvre de l’exposition — Siege_of_Ostend05",
       "caption": "Siege of Ostend",
       "captionNl": "Siege of Ostend"
     },
     {
-      "src": "assets/work-ceramic.png",
+      "src": "assets/work-ceramic.webp",
       "alt": "Sculpture en céramique présentée dans la galerie",
       "caption": "Sofia Marin — Matière vive, 2026",
       "captionNl": "Sofia Marin — Matière vive, 2026"
@@ -76,15 +76,15 @@
     "pausedMessage": "Momenteel zijn er geen tentoonstellingen. Tot binnenkort.",
     "imageCaptions": [
       {
-        "src": "assets/work-mineral.png",
+        "src": "assets/work-mineral.webp",
         "caption": "Ana Vermeer — Strates, 2026"
       },
       {
-        "src": "assets/gallery-hero.png",
+        "src": "assets/gallery-hero.webp",
         "caption": "Terrain sensible — vue de l’exposition"
       },
       {
-        "src": "assets/work-ceramic.png",
+        "src": "assets/work-ceramic.webp",
         "caption": "Sofia Marin — Matière vive, 2026"
       }
     ]
