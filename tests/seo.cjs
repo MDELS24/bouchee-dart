@@ -13,7 +13,7 @@ for(const lang of ['fr','nl']){
   assert.ok(visible.includes('Sint Fransiscusstraat 4'));assert.ok(visible.includes('André LAURENT'));
   assert.ok(!visible.includes('rue des Tanneurs'));assert.ok(!visible.includes('Terrain sensible'));
   const schema=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-  assert.equal(schema.name,data.galleryName);assert.equal(schema.address.postalCode,'8400');
+  assert.equal(schema.name,data.galleryName);assert.equal(schema['@type'],'WebSite');assert.ok(!schema.address);
   for(const match of html.matchAll(/(?:src|href)="([^"]+)"/g)){
     const value=match[1];if(value.startsWith('#')||/^(https?:|mailto:|tel:)/.test(value))continue;
     const path=require('node:path').resolve(lang==='nl'?'nl':'.',value.split('?')[0]);assert.ok(fs.existsSync(path),`Missing asset ${path}`);

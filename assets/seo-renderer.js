@@ -31,9 +31,7 @@
     html=html.replace('href="admin/"',`href="${prefix}admin/"`);
     html=html.replace('href="/" data-lang="fr"',`href="${prefix||"./"}" data-lang="fr"`).replace('href="/nl/" data-lang="nl"',`href="${lang==="nl"?"./":"nl/"}" data-lang="nl"`);
     html=html.replace(/class="(?:active)?" data-field="lang(Fr|Nl)Label"/g,(_,label)=>`class="${(label==="Nl") === (lang==="nl")?"active":""}" data-field="lang${label}Label"`);
-    const addressLines=String(content.address||"").trim().split("\n");
-    const postalLine=addressLines.slice(1).join(" "),postal=postalLine.match(/\b\d{4}\b/);
-    const schema={"@context":"https://schema.org","@type":"ArtGallery","@id":origin+"/#centre",name:data.galleryName,url:origin+"/",description:content.galleryIntro,address:{"@type":"PostalAddress",streetAddress:addressLines[0]?.trim(),postalCode:postal?.[0],addressLocality:postalLine.replace(/\b\d{4}\b/,"").trim(),addressCountry:"BE"},email:content.email||undefined,telephone:content.phone||undefined,image:new URL(data.heroImage,origin+"/").href};
+    const schema={"@context":"https://schema.org","@type":"WebSite","@id":origin+"/#website",name:data.galleryName,url:origin+"/",inLanguage:["fr","nl"],description:content.metaDescription};
     const metadata=`<link rel="canonical" href="${url}">
   <link rel="alternate" hreflang="fr" href="${origin}/">
   <link rel="alternate" hreflang="nl" href="${origin}/nl/">
