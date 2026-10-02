@@ -13,9 +13,9 @@
   "manager": "C.D.",
   "address": "Sint Fransiscusstraat 4 \n8400 Oostende",
   "hours": "Jeudi — dimanche\n14 h — 17 h",
-  "email": "test@boucheedart.be",
-  "phone": "+32 2 555 01 47",
-  "additionalInfo": "Visites de groupe sur rendez-vous. Le Centre d'Art est accessible pour les PMR.",
+  "email": "info : schardandre@gmail.com",
+  "phone": "",
+  "additionalInfo": "info : schardandre@gmail.com",
   "heroImage": "assets/uploads/1790943963690-accueil-image-20261002142140.webp",
   "images": [
     {
@@ -42,7 +42,7 @@
     "visitTitle": "Kunsttentoonstelling",
     "address": "24, rue des Tanneurs\n1000 Ostende",
     "hours": "Donderdag — zondag\n14 — 17 uur",
-    "additionalInfo": "Groepsbezoeken op afspraak. De galerie is toegankelijk.",
+    "additionalInfo": "info : schardandre@gmail.com",
     "pausedMessage": "Momenteel zijn er geen tentoonstellingen. Tot binnenkort.",
     "imageCaptions": [
       {
