@@ -20,6 +20,8 @@ La rubrique **Bandeau temporaire en haut du site** affiche un bandeau rouge sur 
 
 ## Structure
 
+Le logo transparent est fourni en WebP, en deux tailles : 160 px pour l’en-tête cliquable et 480 px pour la rubrique Visite. Ses liens et les chemins des images restent valides dans les deux langues et lors des publications du CMS. La palette reprend le bordeaux et le bleu gris de l’ancienne enseigne, avec le fond ivoire et les polices d’origine ; le nom principal et le titre d’exposition restent noirs.
+
 - `content/site.json` : contenu éditable.
 - `assets/uploads/` : photos ajoutées depuis le CMS.
 - `admin/` : interface d’administration.

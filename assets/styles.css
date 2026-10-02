@@ -116,3 +116,38 @@ footer { display: flex; justify-content: space-between; padding: 2rem var(--pad)
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* Palette inspired by the historic shop sign; original typography retained. */
+:root { --paper: #f3f0e9; --ink: #293034; --muted: #566872; --accent: #955b60; --line: rgba(85, 105, 113, .3); --slate: #596d76; }
+.site-header { background: rgba(243, 240, 233, .97); border-color: var(--line); }
+.brand { color: var(--accent); }
+h1, #exposition h2 { color: #1d1c19; }
+h3 { color: var(--slate); }
+.temporary-message { background: var(--accent); color: #fffaf0; }
+.people { background: var(--slate); color: var(--paper); }
+.people h3, .people .eyebrow { color: var(--paper); }
+.language-switch a.active { color: var(--accent); }
+.text-link { color: var(--accent); }
+.art-card img { background: #d9dedb; }
+footer { color: var(--slate); border-color: var(--line); }
+
+.brand { display: block; width: 80px; flex-shrink: 0; }
+.brand img { width: 100%; height: auto; }
+.hero, .section { scroll-margin-top: 9rem; }
+.brand:focus-visible, .visit-logo:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.visit-layout { display: grid; grid-template-columns: minmax(0, 1fr) clamp(180px, 20vw, 260px); gap: clamp(2rem, 4vw, 4rem); align-items: center; }
+.visit-content { min-width: 0; }
+.visit-logo { display: block; width: 100%; max-width: 260px; justify-self: end; }
+.visit-logo img { width: 100%; height: auto; }
+.exhibition .section-heading { grid-template-columns: minmax(0, 1fr); gap: .65rem; }
+.exhibition .section-heading .eyebrow { margin: 0; padding: 0; }
+.exhibition .dates { grid-column: 1; margin: .35rem 0 0; }
+.exhibition-copy { gap: 1.5rem 4vw; margin: 2.25rem 0; }
+.visit .section-heading .eyebrow { margin: 0; }
+.visit-grid { gap: 2rem; margin-top: 2rem; }
+.people-grid { gap: 2rem; }
+@media (max-width: 760px) {
+  .brand { width: 64px; max-width: none; }
+  .visit-layout { grid-template-columns: 1fr; }
+  .visit-logo { width: 180px; justify-self: center; }
+}

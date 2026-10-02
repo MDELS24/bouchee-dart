@@ -28,13 +28,13 @@
   "sitePaused": false,
   "pausedMessage": "Le site web de Bouchée d'Art n'est pas encore disponible. À bientôt.",
   "exhibitionTitle": "voyage inattendu",
-  "exhibitionDates": "02 — 05 novembre 2026",
-  "exhibitionText": "SAINT MALO / OOSTENDE\nPaintings & Sculptures",
-  "exhibitionExtra": "Vernissage 03/10 16:00\nOpen 10:00 — 18:00",
+  "exhibitionDates": "02 — 05 octobre 2026",
+  "exhibitionText": "SAINT MALO / OOSTENDE\nPeintures et sculptures",
+  "exhibitionExtra": "Vernissage 03/10 16:00\nOuvert de 10:00 à 18:00",
   "artists": "André LAURENT",
   "manager": "C.D.",
   "address": "Sint Fransiscusstraat 4\n8400 Oostende",
-  "hours": "open 10:00 — 18:00",
+  "hours": "Ouvert de 10:00 à 18:00",
   "email": "schardandre@gmail.com",
   "phone": "",
   "additionalInfo": "",
@@ -42,9 +42,10 @@
   "images": [
     {
       "src": "assets/uploads/1790944674461-oeuvre-image-20261002142140.webp",
-      "alt": "Œuvre — image_20261002142140",
+      "alt": "Œuvre exposée à Bouchée d’Art",
       "caption": "",
-      "captionNl": ""
+      "captionNl": "",
+      "altNl": "Kunstwerk tentoongesteld bij Bouchée d’Art"
     }
   ],
   "peopleTitle": "Artiste exposé",
@@ -77,15 +78,15 @@
     "galleryIntro": "Bouchée d’Art is een kunstcentrum in Oostende, gevestigd in de Sint Fransiscusstraat 4. Ontdek tentoonstellingen met schilderijen en sculpturen en de deelnemende kunstenaars.",
     "exhibitionEyebrow": "Nu te zien",
     "exhibitionTitle": "voyage inattendu",
-    "exhibitionDates": "02 — 05 november 2026",
+    "exhibitionDates": "02 — 05 oktober 2026",
     "exhibitionText": "SAINT MALO / OOSTENDE\nSchilderijen en sculpturen",
-    "exhibitionExtra": "Vernissage 03/10 16:00\nOpen 10:00 — 18:00",
+    "exhibitionExtra": "Opening 03/10 16:00\nOpen van 10:00 tot 18:00",
     "artists": "André LAURENT",
     "manager": "C.D.",
     "peopleTitle": "Kunstenaar",
     "visitTitle": "Kunsttentoonstelling",
     "address": "Sint Fransiscusstraat 4\n8400 Oostende",
-    "hours": "open 10:00 — 18:00",
+    "hours": "Open van 10:00 tot 18:00",
     "additionalInfo": "",
     "pausedMessage": "Momenteel zijn er geen tentoonstellingen. Tot binnenkort.",
     "imageCaptions": [
@@ -102,7 +103,7 @@
         "caption": "Sofia Marin — Matière vive, 2026"
       }
     ],
-    "temporaryMessage": "Vernissage 03/10 16:00"
+    "temporaryMessage": "Opening 03/10 16:00"
   },
   "temporaryMessage": "Vernissage 03/10 16:00",
   "temporaryMessageVisible": true
