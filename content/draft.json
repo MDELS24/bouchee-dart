@@ -1,6 +1,6 @@
 {
   "galleryName": "Bouchée d’Art",
-  "heroEyebrow": "Centre d'Art — à Ostende",
+  "heroEyebrow": "Centre d'Art à Ostende",
   "galleryIntro": "Paintings & Sculptures\nTentoostelling-exposition",
   "exhibitionEyebrow": "En ce moment",
   "sitePaused": false,
@@ -16,13 +16,19 @@
   "email": "info : schardandre@gmail.com",
   "phone": "",
   "additionalInfo": "info : schardandre@gmail.com",
-  "heroImage": "assets/uploads/1790943963690-accueil-image-20261002142140.webp",
+  "heroImage": "assets/uploads/1790944665138-accueil-image-20261002142203.webp",
   "images": [
     {
       "src": "assets/uploads/1790943904063-oeuvre-image-20261002142203.webp",
       "alt": "Œuvre — image_20261002142203",
       "caption": "ANDRE LAURENT",
       "captionNl": "ANDRE LAURENT"
+    },
+    {
+      "src": "assets/uploads/1790944674461-oeuvre-image-20261002142140.webp",
+      "alt": "Œuvre — image_20261002142140",
+      "caption": "",
+      "captionNl": ""
     }
   ],
   "peopleTitle": "Artiste exposé",
