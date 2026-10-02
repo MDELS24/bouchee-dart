@@ -31,7 +31,7 @@ const wait=milliseconds=>new Promise(resolve=>setTimeout(resolve,milliseconds));
 async function writeJson(path,data,message){for(let attempt=0;attempt<3;attempt++){let sha;try{sha=(await github(`${repoPath(path)}?ref=${encodeURIComponent(BRANCH)}&t=${Date.now()}`)).sha;}catch(e){if(e.status!==404)throw e;}try{return await github(repoPath(path),{method:"PUT",body:JSON.stringify({message,content:encode(JSON.stringify(data,null,2)+"\n"),sha,branch:BRANCH})});}catch(e){const conflict=e.status===409||e.status===422&&/does not match|sha/i.test(e.message);if(!conflict)throw e;if(attempt===2)throw new Error("Une autre sauvegarde vient d’être effectuée. Attendez quelques secondes, puis réessayez.");saveStatus.textContent=`Une modification simultanée a été détectée. Nouvelle tentative ${attempt+2}/3…`;await wait(700*(attempt+1));}}}
 function getValue(object,path){return path.split(".").reduce((value,key)=>value?.[key],object);}
 function setValue(object,path,value){const keys=path.split(".");const last=keys.pop();const target=keys.reduce((item,key)=>item[key]??={},object);target[last]=value;}
-function collectForm(){contentForm.querySelectorAll("input[name],textarea[name]").forEach(field=>{if(field.type==="checkbox")setValue(state.content,field.name,field.checked);else setValue(state.content,field.name,field.value.trim());});}
+function collectForm(){contentForm.querySelectorAll("input[name],textarea[name]").forEach(field=>{if(field.type==="checkbox")setValue(state.content,field.name,field.checked);else setValue(state.content,field.name,field.value.trim());});state.content.nl.galleryName=state.content.galleryName;}
 function fillForm(){contentForm.querySelectorAll("input[name],textarea[name]").forEach(field=>{const value=getValue(state.content,field.name);if(field.type==="checkbox")field.checked=Boolean(value);else field.value=value??"";});renderHeroPreview();renderImages();}
 async function loadContent(){try{state.content=(await readFile(DRAFT)).data;}catch(e){if(e.status!==404)throw e;state.content=(await readFile(PUBLISHED)).data;}state.content={...window.siteTextDefaults.fr,...state.content,nl:{...window.siteTextDefaults.nl,...(state.content.nl||{})}};state.content.images??=[];state.content.images.forEach(image=>image.captionNl??=image.caption||"");fillForm();}
 function renderHeroPreview(source=state.content?.heroImage){const preview=document.querySelector("#hero-preview-image");if(source){preview.src=`../${source}`;preview.closest("figure").hidden=false;}else preview.closest("figure").hidden=true;}
@@ -61,5 +61,23 @@ async function saveDraft(){saveStatus.textContent="Enregistrement du brouillon�
 async function cleanupUnused(){let files=[];try{files=await github(`${repoPath("assets/uploads")}?ref=${encodeURIComponent(BRANCH)}`);}catch(e){if(e.status===404)return;throw e;}const used=new Set([state.content.heroImage,...state.content.images.map(image=>image.src)]);for(const file of files)if(file.type==="file"&&!used.has(file.path))await github(repoPath(file.path),{method:"DELETE",body:JSON.stringify({message:`Supprime l’image inutilisée ${file.name}`,sha:file.sha,branch:BRANCH})});}
 async function busy(button,task){const controls=[...contentForm.querySelectorAll("input,textarea,button")],disabled=controls.map(control=>control.disabled);controls.forEach(control=>control.disabled=true);editorPanel.setAttribute("aria-busy","true");try{await task();}catch(e){saveStatus.textContent=`Échec : ${e.message}`;}finally{controls.forEach((control,index)=>control.disabled=disabled[index]);editorPanel.removeAttribute("aria-busy");}}
 document.querySelector("#save-button").onclick=event=>busy(event.currentTarget,saveDraft);
-document.querySelector("#publish-button").onclick=event=>busy(event.currentTarget,async()=>{saveStatus.textContent="Publication… Ne modifiez pas le formulaire.";collectForm();await writeJson(DRAFT,state.content,"Enregistre le brouillon avant publication");await writeJson(PUBLISHED,state.content,"Publie le site bilingue");saveStatus.textContent="Nettoyage des images inutilisées… Ne modifiez pas le formulaire.";await cleanupUnused();saveStatus.textContent="Site publié. La mise à jour peut prendre jusqu’à 5 minutes.";});
+async function publishSnapshot(){
+  const response=await fetch("../assets/page-template.html",{cache:"no-store"});
+  if(!response.ok)throw new Error("Le modèle de publication n’a pas pu être chargé. Réessayez avant de publier.");
+  const template=await response.text();
+  const content=JSON.stringify(state.content,null,2)+"\n";
+  const files={
+    [DRAFT]:content,[PUBLISHED]:content,
+    "index.html":window.siteSeoRenderer.render(template,state.content,window.siteTextDefaults,"fr"),
+    "nl/index.html":window.siteSeoRenderer.render(template,state.content,window.siteTextDefaults,"nl")
+  };
+  const base=`/repos/${state.owner}/${state.repo}/git`;
+  const ref=await github(`${base}/ref/heads/${BRANCH}`);
+  const parent=await github(`${base}/commits/${ref.object.sha}`);
+  const tree=await github(`${base}/trees`,{method:"POST",body:JSON.stringify({base_tree:parent.tree.sha,tree:Object.entries(files).map(([path,content])=>({path,mode:"100644",type:"blob",content}))})});
+  const commit=await github(`${base}/commits`,{method:"POST",body:JSON.stringify({message:"Publie le site bilingue et les pages optimisées pour Google",tree:tree.sha,parents:[ref.object.sha]})});
+  try{await github(`${base}/refs/heads/${BRANCH}`,{method:"PATCH",body:JSON.stringify({sha:commit.sha,force:false})});}
+  catch(error){if(error.status===409||error.status===422)throw new Error("Le dépôt vient de changer. Aucune publication n’a été appliquée. Réessayez la publication.");throw error;}
+}
+document.querySelector("#publish-button").onclick=event=>busy(event.currentTarget,async()=>{saveStatus.textContent="Publication des deux langues et du référencement… Ne modifiez pas le formulaire.";collectForm();await publishSnapshot();saveStatus.textContent="Nettoyage des images inutilisées… Ne modifiez pas le formulaire.";await cleanupUnused();saveStatus.textContent="Site publié dans les deux langues. La mise à jour peut prendre jusqu’à 5 minutes.";});
 document.querySelector("#logout").onclick=()=>{Object.assign(state,{token:"",content:null});contentForm.reset();editorPanel.hidden=true;loginPanel.hidden=false;loginStatus.textContent="Session fermée.";};

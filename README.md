@@ -22,3 +22,11 @@ Les rubriques Artistes et Visite conservent un seul titre rouge, légèrement ag
 - `assets/uploads/` : photos ajoutées depuis le CMS.
 - `admin/` : interface d’administration.
 - `index.html` : site public.
+
+## Référencement et langues
+
+Le français est publié sur `/` et le néerlandais sur `/nl/`, avec le même nom de centre dans les deux langues. Les liens de langue fonctionnent sans JavaScript. Chaque page possède un titre, une description, une URL canonique, des liens `hreflang` et des données structurées `ArtGallery`. `sitemap.xml` déclare les deux pages ; `robots.txt` indique ce sitemap. La balise Search Console du propriétaire reste dans le modèle.
+
+Le CMS publie les JSON et les deux pages HTML dans un seul commit, à partir de `assets/page-template.html` et de `assets/seo-renderer.js`. Les contenus sont donc présents dans le HTML dès le chargement, sans attendre JavaScript. Le brouillon reste enregistré indépendamment. Une mise à jour concurrente du dépôt pendant la publication est refusée sans forcer la branche.
+
+Après une modification locale de `content/site.json` ou du modèle, exécuter `node scripts/build-seo.cjs` puis `node tests/seo.cjs` avant publication. Les horaires structurés et les avis ne sont pas inventés. Search Console et la fiche Google nécessitent une connexion au compte du propriétaire.

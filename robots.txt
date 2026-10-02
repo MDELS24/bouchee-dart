@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /assets/page-template.html
+Disallow: /content/draft.json
+Disallow: /scripts/
+
+Sitemap: https://boucheedart.be/sitemap.xml
