@@ -4,10 +4,12 @@ const siteRoot=new URL("../",document.currentScript.src);
 const embedded=document.querySelector("#published-content");
 let siteData=embedded?JSON.parse(embedded.textContent):fallback;
 let currentLang=document.documentElement.lang==="nl"?"nl":"fr";
+// Retire l'ancienne préférence ; la langue est désormais déterminée par l'URL.
+try{localStorage.removeItem("bouchee-lang");}catch{}
 const safeLines=value=>String(value??"").split("\n").map(line=>{const span=document.createElement("span");span.textContent=line;return span.outerHTML;}).join("<br>");
 
 function render(data,lang=currentLang){
-  currentLang=lang;localStorage.setItem("bouchee-lang",lang);document.documentElement.lang=lang;
+  currentLang=lang;document.documentElement.lang=lang;
   const content={...fallback,...data,...labels[lang],...(lang==="nl"?(data.nl||{}):data),galleryName:data.galleryName||fallback.galleryName};document.title=[content.galleryName,content.pageTitleSuffix].filter(Boolean).join(" — ");
   document.querySelector('meta[name="description"]').content=content.metaDescription;
   if(content.sitePaused){document.body.replaceChildren();document.body.className="site-paused";const main=document.createElement("main");main.className="paused-page";const message=document.createElement("p");message.textContent=content.pausedMessage||fallback.pausedMessage;main.append(message);document.body.append(main);return;}
