@@ -16,7 +16,7 @@ Le CMS permet de modifier tous les textes du site en français et en néerlandai
 
 Les rubriques Artistes et Visite conservent un seul titre rouge, légèrement agrandi pour la lisibilité. Les anciens champs `peopleTitle` et `visitTitle` restent conservés dans les données existantes mais ne sont plus affichés. Les textes ajoutés au CMS reprennent les valeurs par défaut de `assets/text-defaults.js` lors de l’ouverture d’un ancien contenu.
 
-La rubrique **Bandeau temporaire en haut du site** affiche un bandeau rouge sur toute la largeur, au-dessus de la navigation. Modifier le texte dans chaque langue, utiliser le bouton **Afficher le bandeau / Retirer le bandeau**, puis publier. Le retrait s’applique aux deux langues, conserve le texte et ne laisse aucun espace. La présentation est accessible dans un volet fermé par défaut, dont l’intitulé reste également éditable.
+La rubrique **Bandeau temporaire en haut du site** affiche un bandeau rouge sur toute la largeur, au-dessus de la navigation. Modifier le texte dans chaque langue, choisir **Afficher / Masquer** avec les boutons radio, puis publier. Le retrait s’applique aux deux langues, conserve le texte et ne laisse aucun espace. La présentation est accessible dans un volet fermé par défaut, dont l’intitulé reste également éditable.
 
 ## Structure
 
@@ -32,3 +32,5 @@ Le français est publié sur `/` et le néerlandais sur `/nl/`, avec le même no
 Le CMS publie les JSON et les deux pages HTML dans un seul commit, à partir de `assets/page-template.html` et de `assets/seo-renderer.js`. Les contenus sont donc présents dans le HTML dès le chargement, sans attendre JavaScript. Le brouillon reste enregistré indépendamment. Une mise à jour concurrente du dépôt pendant la publication est refusée sans forcer la branche.
 
 Après une modification locale de `content/site.json` ou du modèle, exécuter `node scripts/build-seo.cjs` puis `node tests/seo.cjs` avant publication. Le référencement concerne uniquement la recherche Google : aucune fiche d’établissement ou inscription sur Google Maps n’est créée. Search Console nécessite une connexion au compte du propriétaire.
+
+Le CMS suit l’ordre du site : bandeau, en-tête, accueil, exposition, artistes, visite et contact. Des liens permettent de rejoindre chaque rubrique. Les options de référencement, d’accessibilité et de mise en pause sont regroupées en fin de formulaire. Vérifications locales : `node tests/cms.cjs` et `node tests/seo.cjs`. Le lien d’administration ne figure plus dans le pied de page public ; le CMS reste disponible à `/admin/`.

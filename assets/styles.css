@@ -80,7 +80,6 @@ h3 { margin: 0 0 .7rem; font-size: .74rem; font-weight: 600; letter-spacing: .14
 .additional { max-width: 44rem; margin: 0; padding-top: 2rem; border-top: 1px solid var(--line); color: var(--muted); }
 .additional:not([hidden]) { margin-top: 2rem; }
 footer { display: flex; justify-content: space-between; padding: 2rem var(--pad); border: 1px solid var(--line); border-top: 0; font-size: .78rem; }
-.admin-link { color: #9a958c; }
 .reveal { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 

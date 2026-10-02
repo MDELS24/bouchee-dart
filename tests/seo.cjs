@@ -27,6 +27,8 @@ for(const lang of ['fr','nl']){
 }
 const malicious={...data,galleryName:'<script>alert("bad")</script>',galleryIntro:'<img src=x onerror=alert(1)>',nl:{...data.nl,galleryName:'Other name'}};
 const escaped=render(template,malicious,defaults,'nl');
+const injected=render(template.replace('</head>','<script src="//local.adguard.org/injected"></script><script>unwanted()</script></head>'),data,defaults,'fr');
+assert.ok(!injected.includes('local.adguard.org'));assert.ok(!injected.includes('unwanted()'));assert.ok(injected.includes('assets/site.js?v='));
 assert.ok(!escaped.includes('<script>alert('));assert.ok(escaped.includes('&lt;script&gt;'));
 const blank=render(template,{...data,discover:'',images:[{...data.images[0],caption:'FR caption',captionNl:''}]},defaults,'nl');
 assert.ok(!blank.includes('<figcaption>FR caption</figcaption>'));

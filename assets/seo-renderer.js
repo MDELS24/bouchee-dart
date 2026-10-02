@@ -4,6 +4,8 @@
   const json=value=>JSON.stringify(value).replace(/</g,"\\u003c");
   const localize=(data,defaults,lang)=>({...data,...defaults[lang],...(lang==="nl"?data.nl||{}:data),galleryName:data.galleryName});
   function render(template,data,defaults,lang){
+    // Keep only the site's scripts when the browser/network injects extra scripts into the template.
+    template=template.replace(/<script\b([^>]*)>[\s\S]*?<\/script>/gi,(tag,attrs)=>/\bsrc="assets\/(?:site|text-defaults)\.js(?:\?v=\d+)?"/.test(attrs)?tag:"");
     const content=localize(data,defaults,lang),prefix=lang==="nl"?"../":"",url=origin+(lang==="nl"?"/nl/":"/");
     let html=template.replace(/<html lang="[^"]*"/,`<html lang="${lang}"`);
     html=html.replace(/<([a-z][\w-]*)\b([^>]*\bdata-field="([^"]+)"[^>]*)>[\s\S]*?<\/\1>/gi,(_,tag,attrs,key)=>{
