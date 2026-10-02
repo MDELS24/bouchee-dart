@@ -104,5 +104,6 @@
     ],
     "temporaryMessage": "Vernissage 03/10 16:00"
   },
-  "temporaryMessage": "Vernissage 03/10 16:00"
+  "temporaryMessage": "Vernissage 03/10 16:00",
+  "temporaryMessageVisible": true
 }

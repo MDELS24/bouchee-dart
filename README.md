@@ -16,7 +16,7 @@ Le CMS permet de modifier tous les textes du site en français et en néerlandai
 
 Les rubriques Artistes et Visite conservent un seul titre rouge, légèrement agrandi pour la lisibilité. Les anciens champs `peopleTitle` et `visitTitle` restent conservés dans les données existantes mais ne sont plus affichés. Les textes ajoutés au CMS reprennent les valeurs par défaut de `assets/text-defaults.js` lors de l’ouverture d’un ancien contenu.
 
-Le champ **Message temporaire en haut à droite** affiche un encart rouge dans l’en-tête. Modifier le texte dans chaque langue puis publier ; vider les deux champs puis publier pour le retirer sans laisser d’espace. La présentation est accessible dans un volet fermé par défaut, dont l’intitulé reste également éditable.
+La rubrique **Bandeau temporaire en haut du site** affiche un bandeau rouge sur toute la largeur, au-dessus de la navigation. Modifier le texte dans chaque langue, utiliser le bouton **Afficher le bandeau / Retirer le bandeau**, puis publier. Le retrait s’applique aux deux langues, conserve le texte et ne laisse aucun espace. La présentation est accessible dans un volet fermé par défaut, dont l’intitulé reste également éditable.
 
 ## Structure
 

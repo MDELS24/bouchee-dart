@@ -9,7 +9,7 @@
     html=html.replace(/<([a-z][\w-]*)\b([^>]*\bdata-field="([^"]+)"[^>]*)>[\s\S]*?<\/\1>/gi,(_,tag,attrs,key)=>{
       const value=content[key]??"";
       attrs=attrs.replace(/\s+hidden\b/g,"");
-      return `<${tag}${attrs}${String(value).trim()?"":" hidden"}>${escape(value).replace(/\n/g,"<br>")}</${tag}>`;
+      return `<${tag}${attrs}${String(value).trim()&&!(key==="temporaryMessage"&&data.temporaryMessageVisible===false)?"":" hidden"}>${escape(value).replace(/\n/g,"<br>")}</${tag}>`;
     });
     html=html.replace(/(<[^>]*\bdata-aria-field="([^"]+)"[^>]*>)/g,(tag,_,key)=>tag.replace(/aria-label="[^"]*"/,`aria-label="${escape(content[key])}"`));
     html=html.replace(/<title>[\s\S]*?<\/title>/,`<title>${escape([content.galleryName,content.pageTitleSuffix].filter(Boolean).join(" — "))}</title>`);

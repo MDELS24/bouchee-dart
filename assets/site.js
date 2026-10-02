@@ -13,6 +13,7 @@ function render(data,lang=currentLang){
   if(content.sitePaused){document.body.replaceChildren();document.body.className="site-paused";const main=document.createElement("main");main.className="paused-page";const message=document.createElement("p");message.textContent=content.pausedMessage||fallback.pausedMessage;main.append(message);document.body.append(main);return;}
   document.querySelectorAll("[data-field]").forEach(el=>{const value=content[el.dataset.field];if(value!==undefined){el.innerHTML=safeLines(value);el.hidden=!String(value).trim();}});
   document.querySelector(".text-link").hidden=!String(content.discover).trim();
+  document.querySelector(".temporary-message").hidden=data.temporaryMessageVisible===false||!String(content.temporaryMessage||"").trim();
   document.querySelector("#gallery-about").hidden=!String(content.galleryIntro||"").trim()||!String(content.aboutLabel||"").trim();
   document.querySelectorAll("[data-aria-field]").forEach(el=>el.setAttribute("aria-label",content[el.dataset.ariaField]));
   document.querySelectorAll("[data-lang]").forEach(button=>button.classList.toggle("active",button.dataset.lang===lang));

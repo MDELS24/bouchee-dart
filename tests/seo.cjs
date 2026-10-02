@@ -5,6 +5,8 @@ const defaults=context.window.siteTextDefaults;
 const template=fs.readFileSync('assets/page-template.html','utf8');
 const data=JSON.parse(fs.readFileSync('content/site.json','utf8'));
 for(const lang of ['fr','nl']){
+  const hiddenMessage=render(template,{...data,temporaryMessageVisible:false},defaults,lang);
+  assert.ok(hiddenMessage.includes('<p class="temporary-message" data-field="temporaryMessage" hidden>Vernissage 03/10 16:00</p>'));
   const html=render(template,data,defaults,lang),visible=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,'');
   assert.ok(html.includes(`<html lang="${lang}"`));
   assert.ok(html.includes(`<link rel="canonical" href="https://boucheedart.be/${lang==='nl'?'nl/':''}">`));
@@ -12,6 +14,7 @@ for(const lang of ['fr','nl']){
   assert.ok(html.includes('<details class="gallery-about" id="gallery-about">'));
   assert.ok(html.includes(lang==='nl'?'Over het kunstcentrum':'À propos du centre'));
   assert.ok(html.includes('<p class="temporary-message" data-field="temporaryMessage">Vernissage 03/10 16:00</p>'));
+  assert.match(html, /<header class="site-header">\s*<p class="temporary-message"/);
   assert.ok(visible.includes(lang==='nl'?'Kunstcentrum in Oostende':'Centre d’art à Ostende'));
   assert.ok(visible.includes('Sint Fransiscusstraat 4'));assert.ok(visible.includes('André LAURENT'));
   assert.ok(!visible.includes('rue des Tanneurs'));assert.ok(!visible.includes('Terrain sensible'));
