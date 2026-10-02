@@ -1,7 +1,7 @@
 {
   "galleryName": "Bouchée d’Art",
   "heroEyebrow": "Centre d'Art à Ostende",
-  "galleryIntro": "Paintings & Sculptures\nTentoostelling-exposition",
+  "galleryIntro": "",
   "exhibitionEyebrow": "En ce moment",
   "sitePaused": false,
   "pausedMessage": "Le site web de Bouchée d'Art n'est pas encore disponible. À bientôt.",
@@ -36,7 +36,7 @@
   "nl": {
     "galleryName": "Bouchée d’Art",
     "heroEyebrow": "Kunsttentoonstelling in Oostende",
-    "galleryIntro": "Paintings & Sculptures\nTentoostelling-exposition",
+    "galleryIntro": "",
     "exhibitionEyebrow": "Nu te zien",
     "exhibitionTitle": "voyage inattendu",
     "exhibitionDates": "02 — 05 november 2026",
