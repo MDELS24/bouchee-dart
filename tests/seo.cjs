@@ -11,6 +11,7 @@ for(const lang of ['fr','nl']){
   assert.ok(html.includes('hreflang="fr"'));assert.ok(html.includes('hreflang="nl"'));
   assert.ok(html.includes('<details class="gallery-about" id="gallery-about">'));
   assert.ok(html.includes(lang==='nl'?'Over het kunstcentrum':'À propos du centre'));
+  assert.ok(html.includes('<p class="temporary-message" data-field="temporaryMessage">Vernissage 03/10 16:00</p>'));
   assert.ok(visible.includes(lang==='nl'?'Kunstcentrum in Oostende':'Centre d’art à Ostende'));
   assert.ok(visible.includes('Sint Fransiscusstraat 4'));assert.ok(visible.includes('André LAURENT'));
   assert.ok(!visible.includes('rue des Tanneurs'));assert.ok(!visible.includes('Terrain sensible'));
@@ -28,6 +29,10 @@ const blank=render(template,{...data,discover:'',images:[{...data.images[0],capt
 assert.ok(!blank.includes('<figcaption>FR caption</figcaption>'));
 const paused=render(template,{...data,sitePaused:true},defaults,'fr');assert.ok(paused.includes('class="site-paused"'));assert.ok(!paused.includes('id="exposition"'));
 assert.ok(render(template,{...data,galleryIntro:''},defaults,'fr').includes('id="gallery-about" hidden'));
+for(const lang of ['fr','nl']){
+  const withoutMessage={...data,temporaryMessage:'',nl:{...data.nl,temporaryMessage:''}};
+  assert.ok(render(template,withoutMessage,defaults,lang).includes('<p class="temporary-message" data-field="temporaryMessage" hidden></p>'));
+}
 (async()=>{
   const calls=[];
   const source=fs.readFileSync('admin/admin.js','utf8');

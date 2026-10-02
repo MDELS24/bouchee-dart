@@ -1,6 +1,7 @@
 // Shared by the public site and CMS, including content saved before these fields existed.
 window.siteTextDefaults = {
   fr: {
+    temporaryMessage: "",
     navExhibition: "Exposition", navArtists: "Artistes", navVisit: "Visiter",
     discover: "Découvrir l’exposition", aboutLabel: "À propos du centre", peopleEyebrow: "Les personnes",
     artistsLabel: "Artistes exposés", managerLabel: "Responsable",
@@ -13,6 +14,7 @@ window.siteTextDefaults = {
     artGridAriaLabel: "Œuvres de l’exposition"
   },
   nl: {
+    temporaryMessage: "",
     navExhibition: "Tentoonstelling", navArtists: "Kunstenaars", navVisit: "Bezoeken",
     discover: "Ontdek de tentoonstelling", aboutLabel: "Over het kunstcentrum", peopleEyebrow: "De mensen",
     artistsLabel: "Kunstenaars", managerLabel: "Verantwoordelijke",
