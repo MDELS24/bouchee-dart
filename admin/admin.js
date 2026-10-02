@@ -4,7 +4,7 @@ const loginPanel=document.querySelector("#login-panel"),editorPanel=document.que
 
 const textGroups = [
   ["Titres rouges et sous-titres", [["peopleEyebrow","Titre rouge — Artistes"],["visitEyebrow","Titre rouge — Visite"],["artistsLabel","Sous-titre des artistes"],["managerLabel","Sous-titre du responsable"],["addressLabel","Sous-titre de l’adresse"],["hoursLabel","Sous-titre des horaires"],["contactLabel","Sous-titre du contact"]]],
-  ["Navigation et liens", [["navExhibition","Menu — Exposition"],["navArtists","Menu — Artistes"],["navVisit","Menu — Visite"],["menuLabel","Bouton du menu mobile"],["discover","Lien vers l’exposition"],["adminLabel","Lien d’administration"],["langFrLabel","Bouton de langue française"],["langNlLabel","Bouton de langue néerlandaise"]]],
+  ["Navigation et liens", [["aboutLabel","Intitulé du volet de présentation"],["navExhibition","Menu — Exposition"],["navArtists","Menu — Artistes"],["navVisit","Menu — Visite"],["menuLabel","Bouton du menu mobile"],["discover","Lien vers l’exposition"],["adminLabel","Lien d’administration"],["langFrLabel","Bouton de langue française"],["langNlLabel","Bouton de langue néerlandaise"]]],
   ["Description du site et accessibilité", [["heroAlt","Description de la photo d’accueil"],["workLabel","Description des œuvres sans texte alternatif"],["pageTitleSuffix","Complément du titre de l’onglet"],["metaDescription","Description pour les moteurs de recherche"],["navAriaLabel","Description de la navigation"],["languageAriaLabel","Description du choix de langue"],["artGridAriaLabel","Description de la grille d’œuvres"]]]
 ];
 for(const [title,fields] of textGroups){

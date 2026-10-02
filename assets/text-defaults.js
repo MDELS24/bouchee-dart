@@ -2,7 +2,7 @@
 window.siteTextDefaults = {
   fr: {
     navExhibition: "Exposition", navArtists: "Artistes", navVisit: "Visiter",
-    discover: "Découvrir l’exposition", peopleEyebrow: "Les personnes",
+    discover: "Découvrir l’exposition", aboutLabel: "À propos du centre", peopleEyebrow: "Les personnes",
     artistsLabel: "Artistes exposés", managerLabel: "Responsable",
     visitEyebrow: "Nous rendre visite", addressLabel: "Adresse",
     hoursLabel: "Horaires", contactLabel: "Contact", menuLabel: "Menu",
@@ -14,7 +14,7 @@ window.siteTextDefaults = {
   },
   nl: {
     navExhibition: "Tentoonstelling", navArtists: "Kunstenaars", navVisit: "Bezoeken",
-    discover: "Ontdek de tentoonstelling", peopleEyebrow: "De mensen",
+    discover: "Ontdek de tentoonstelling", aboutLabel: "Over het kunstcentrum", peopleEyebrow: "De mensen",
     artistsLabel: "Kunstenaars", managerLabel: "Verantwoordelijke",
     visitEyebrow: "Bezoek ons", addressLabel: "Adres", hoursLabel: "Openingsuren",
     contactLabel: "Contact", menuLabel: "Menu", adminLabel: "Beheer",

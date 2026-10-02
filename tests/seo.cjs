@@ -9,6 +9,8 @@ for(const lang of ['fr','nl']){
   assert.ok(html.includes(`<html lang="${lang}"`));
   assert.ok(html.includes(`<link rel="canonical" href="https://boucheedart.be/${lang==='nl'?'nl/':''}">`));
   assert.ok(html.includes('hreflang="fr"'));assert.ok(html.includes('hreflang="nl"'));
+  assert.ok(html.includes('<details class="gallery-about" id="gallery-about">'));
+  assert.ok(html.includes(lang==='nl'?'Over het kunstcentrum':'À propos du centre'));
   assert.ok(visible.includes(lang==='nl'?'Kunstcentrum in Oostende':'Centre d’art à Ostende'));
   assert.ok(visible.includes('Sint Fransiscusstraat 4'));assert.ok(visible.includes('André LAURENT'));
   assert.ok(!visible.includes('rue des Tanneurs'));assert.ok(!visible.includes('Terrain sensible'));
@@ -25,6 +27,7 @@ assert.ok(!escaped.includes('<script>alert('));assert.ok(escaped.includes('&lt;s
 const blank=render(template,{...data,discover:'',images:[{...data.images[0],caption:'FR caption',captionNl:''}]},defaults,'nl');
 assert.ok(!blank.includes('<figcaption>FR caption</figcaption>'));
 const paused=render(template,{...data,sitePaused:true},defaults,'fr');assert.ok(paused.includes('class="site-paused"'));assert.ok(!paused.includes('id="exposition"'));
+assert.ok(render(template,{...data,galleryIntro:''},defaults,'fr').includes('id="gallery-about" hidden'));
 (async()=>{
   const calls=[];
   const source=fs.readFileSync('admin/admin.js','utf8');

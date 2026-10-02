@@ -20,6 +20,7 @@
     html=html.replace(/(<a id="phone-link"[^>]*\bhref=")[^"]*/,'$1tel:'+escape(String(content.phone||"").replace(/[^+\d]/g,"")));
     html=html.replace('<br id="contact-break">',`<br id="contact-break"${content.email&&content.phone?"":" hidden"}>`);
     html=html.replace('<a class="text-link"',`<a class="text-link"${String(content.discover||"").trim()?"":" hidden"}`);
+    html=html.replace('id="gallery-about"',`id="gallery-about"${String(content.galleryIntro||"").trim()&&String(content.aboutLabel||"").trim()?"":" hidden"}`);
     const images=(data.images||[]).map((image,index)=>{
       const caption=lang==="nl"?(image.captionNl??image.caption):image.caption;
       const alt=(lang==="nl"?(image.altNl??image.alt):image.alt)||`${content.workLabel} ${index+1}`;
