@@ -26,7 +26,7 @@ for(const lang of ['fr','nl']){
   assert.equal(schema.name,data.galleryName);assert.equal(schema['@type'],'WebSite');assert.ok(!schema.address);
   for(const match of html.matchAll(/(?:src|href)="([^"]+)"/g)){
     const value=match[1];if(value.startsWith('#')||/^(https?:|mailto:|tel:)/.test(value))continue;
-    const path=require('node:path').resolve(lang==='nl'?'nl':'.',value.split('?')[0]);assert.ok(fs.existsSync(path),`Missing asset ${path}`);
+    const path=require('node:path').resolve(value.startsWith('/')?'.':lang==='nl'?'nl':'.',value.split('?')[0].replace(/^\//,''));assert.ok(fs.existsSync(path),`Missing asset ${path}`);
   }
 }
 const malicious={...data,galleryName:'<script>alert("bad")</script>',galleryIntro:'<img src=x onerror=alert(1)>',nl:{...data.nl,galleryName:'Other name'}};
