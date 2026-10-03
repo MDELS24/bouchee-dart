@@ -1,8 +1,10 @@
 {
+  "temporaryMessage": "Vernissage \"voyage inattendu\" 03/10 16:00",
   "navExhibition": "Exposition",
   "navArtists": "Artistes",
   "navVisit": "Visiter",
   "discover": "Découvrir l’exposition",
+  "aboutLabel": "À propos du centre",
   "peopleEyebrow": "",
   "artistsLabel": "Artiste exposé",
   "managerLabel": "Responsable",
@@ -51,10 +53,12 @@
   "peopleTitle": "Artiste exposé",
   "visitTitle": "Le Centre d'Art",
   "nl": {
+    "temporaryMessage": "Opening \"voyage inattendu\" 03/10 16:00",
     "navExhibition": "Tentoonstelling",
     "navArtists": "Kunstenaars",
     "navVisit": "Bezoeken",
     "discover": "Ontdek de tentoonstelling",
+    "aboutLabel": "Over het kunstcentrum",
     "peopleEyebrow": "",
     "artistsLabel": "Kunstenaar",
     "managerLabel": "Verantwoordelijke",
@@ -102,9 +106,7 @@
         "src": "assets/work-ceramic.webp",
         "caption": "Sofia Marin — Matière vive, 2026"
       }
-    ],
-    "temporaryMessage": "Opening 03/10 16:00"
+    ]
   },
-  "temporaryMessage": "Vernissage 03/10 16:00",
   "temporaryMessageVisible": true
 }
