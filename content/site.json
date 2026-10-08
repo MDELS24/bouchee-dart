@@ -27,7 +27,7 @@
   "heroEyebrow": "Centre d'Art à Ostende",
   "galleryIntro": "Bouchée d’Art est un centre d’art à Ostende, situé Sint Fransiscusstraat 4. Découvrez les expositions de peinture et de sculpture et les artistes présentés.",
   "exhibitionEyebrow": "En ce moment",
-  "sitePaused": false,
+  "sitePaused": true,
   "pausedMessage": "Le site web de Bouchée d'Art n'est pas encore disponible. À bientôt.",
   "exhibitionTitle": "voyage inattendu",
   "exhibitionDates": "02 — 05 octobre 2026",
