@@ -1,5 +1,5 @@
 {
-  "temporaryMessage": "Pochain rendez-vous: expo \"swimmin in my head\"",
+  "temporaryMessage": "Pochain rendez-vous: expo \"swimmin in my head\" - Vernissage le vendredi 23 octobre",
   "navExhibition": "Exposition",
   "navArtists": "Artistes",
   "navVisit": "Visiter",
@@ -67,7 +67,7 @@
   "peopleTitle": "Artiste exposé",
   "visitTitle": "Le Centre d'Art",
   "nl": {
-    "temporaryMessage": "Volgende afspraak: expo 'swimmin in my head'",
+    "temporaryMessage": "Volgende afspraak: expo 'swimmin in my head' - Vernissage op vrijdag 23 oktober",
     "navExhibition": "Tentoonstelling",
     "navArtists": "Kunstenaars",
     "navVisit": "Bezoeken",
@@ -122,5 +122,5 @@
       }
     ]
   },
-  "temporaryMessageVisible": false
+  "temporaryMessageVisible": true
 }
